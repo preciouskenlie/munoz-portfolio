@@ -1,0 +1,356 @@
+/* BASE / LIGHT MODE */
+body {
+font-family: Arial, sans-serif;
+margin:0;
+padding-top:60px;
+background:#f5f5dc;
+color:#333;
+transition:background 0.3s, color 0.3s;
+}
+
+body * {
+color:inherit;
+}
+
+.navbar {
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding: 15px 35px 20px 15px;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background-color:#f5f5dc;
+z-index:1000;
+box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar h2 {
+margin:0;
+}
+.nav-left a {
+text-decoration:none;
+padding:8px 15px;
+color:#333;
+transition:background 0.3s, color 0.3s;
+font-size: 20px;
+font-weight: bold;
+}
+
+.nav-left a:hover {
+background:#ffe4e1;
+color:#333;
+border-radius:5px;
+}
+
+button,
+.button {
+background:#333;
+border:none;
+cursor:pointer;
+transition:color 0.3s, background 0.3s;
+color:#f5f5dc;
+padding:10px 15px;
+margin:0;
+line-height:normal;
+vertical-align:middle; 
+}
+
+button:hover,
+.button:hover {
+color:#f5f5dc;
+background:#555;
+border-radius:10px;
+}
+
+.job-title-container {
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:5px;
+margin-bottom:10px;
+}
+
+.job-title-text {
+font-style:italic;
+text-align:left;
+color:gray;
+display:block;
+margin-right:0;
+}
+
+#editJobBtn {
+padding:5px 10px;
+font-size:12px;
+border:none;
+border-radius:5px;
+color:#f5f5dc;
+background:#333;
+font-weight:bold;
+transition:background 0.3s, color 0.3s;
+}
+#editJobBtn:hover {
+background:#555;
+color:#f5f5dc;
+}
+
+.skills-header {
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:10px;
+}
+.skills-header h3 {
+margin:0;
+}
+
+#toggleSkillsBtn {
+padding:5px 10px;
+font-size:12px;
+border:none;
+border-radius:5px;
+color:#f5f5dc;
+background:#333;
+font-weight:bold;
+transition:background 0.3s, color 0.3s;
+}
+#toggleSkillsBtn:hover {
+background:#555;
+color:#f5f5dc;
+}
+
+#main-content {
+display:flex;
+max-width:1100px;
+margin:auto;
+gap:20px;
+padding:20px;
+}
+.left-column,
+.right-column,
+.footer {
+background:#f5f5dc;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+flex:1;
+color:#333;
+}
+
+.profile-img {
+width:260px;
+height:260px;
+border-radius:30%;
+object-fit:cover;
+}
+
+.flip-card {
+width:260px;
+height:260px;
+perspective:1000px;
+margin:auto;
+}
+.flip-card-inner {
+width:100%;
+height:100%;
+transition:transform 0.6s;
+transform-style:preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+transform:rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+border-radius:30%;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:20px;
+box-sizing:border-box;
+text-align:center;
+}
+
+.flip-card-front {
+background:#f5f5dc;
+}
+
+.flip-card-front img {
+width:100%;
+height:100%;
+border-radius:10%;
+}
+
+.flip-card-back {
+background:linear-gradient(145deg, #fff8e1, #f5f5dc, #e0d8c3);
+transform:rotateY(180deg);
+box-shadow:0 3px 6px rgba(0,0,0,0.1);
+}
+
+.flip-card-back p {
+font-size:14px;
+color:#333;
+margin:0;
+word-wrap:break-word;
+line-height:1.4;
+}
+
+.contact p,
+.contact a {
+padding:5px 0;
+font-size:20px;
+}
+
+.skills {
+background:#f5f5dc;
+padding:15px;
+border-radius:8px;
+color:#333;
+}
+.skills dd,
+.skills dt {
+margin-left:10px;
+}
+
+.about p {
+line-height:1.5;
+text-align:justify;
+margin:10px;
+}
+
+.message-form {
+position:relative;
+padding-bottom:50px;
+}
+
+.message-form input,
+.message-form textarea {
+width:100%;
+padding:10px;
+margin-top:5px;
+box-sizing:border-box;
+border:1px solid #aaa;
+border-radius:5px;
+background:#f5f5dc;
+color:#333;
+}
+
+.message-form textarea {
+height:120px;
+resize:none;
+}
+
+.send-btn {
+position:absolute;
+right:10px;
+bottom:10px;
+padding:8px 15px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+background-color:#333;
+color:#f5f5dc;
+transition:background 0.3s, color 0.3s;
+}
+
+.send-btn:hover {
+background-color:#555;
+}
+
+.footer {
+margin:20px auto;
+padding:30px;
+max-width:92%;
+font-size:30px;
+text-align:center;
+color:#333;
+}
+
+
+/* DARK MODE OVERRIDES */
+
+.dark-mode {
+background:#1e1e1e;
+color:#f5f5dc;
+}
+
+.dark-mode .left-column,
+.dark-mode .right-column,
+.dark-mode .footer {
+background:#2b2b2b;
+color:#f5f5dc;
+}
+
+.dark-mode .navbar {
+background-color:#2b2b2b;
+}
+
+.dark-mode .navbar a {
+color:#f5f5dc;
+}
+
+.dark-mode .nav-right button {
+background:#f5f5dc;
+color:#1e1e1e;
+border:none;
+}
+
+.dark-mode .nav-right button:hover {
+background:#ddd;
+color:#1e1e1e;
+}
+
+.dark-mode #editJobBtn,
+.dark-mode #toggleSkillsBtn {
+background:#f5f5dc;
+color:#1e1e1e;
+border:none;
+}
+
+.dark-mode #editJobBtn:hover,
+.dark-mode #toggleSkillsBtn:hover {
+background:#ddd;
+color:#1e1e1e;
+}
+
+.dark-mode .send-btn {
+background-color:#f5f5dc;
+color:#1e1e1e;
+}
+
+.dark-mode .send-btn:hover {
+background-color:#ddd;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+background:#3a3a3a;
+border:1px solid #555;
+color:#f5f5dc;
+}
+
+.dark-mode .flip-card-back {
+background:linear-gradient(145deg, #2c2c2c, #1c1c1c, #f5f5dc20);
+color:#f5f5dc;
+border:1px solid #f5f5dc;
+}
+
+.dark-mode .flip-card-back p {
+color:#f5f5dc;
+}
+
+.dark-mode .skills {
+background:#2b2b2b;
+color:#f5f5dc;
+}
+
+.dark-mode .flip-card-front {
+background:#2b2b2b;
+border:none;
+}

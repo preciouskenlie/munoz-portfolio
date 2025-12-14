@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f2f2f7;
+}
+
+/* NAVIGATION */
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+}
+.navbar a:hover {
+    background: #ffe4e1;
+    color: white;
+    border-radius: 5px;
+}
+
+/* FLEX 2-COLUMN LAYOUT */
+#main-content {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    gap: 20px;
+    padding: 20px;
+}
+.left-column, .right-column {
+    background: #ffb3c6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    flex: 1;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+    width: 260px;
+    height: 260px;
+    border-radius: 30%;
+    object-fit: cover;
+}
+.job-title {
+    color: gray;
+    font-style: italic;
+    text-align: center;
+}
+
+/* FLIP CARD */
+.flip-card {
+    width: 260px;
+    height: 260px;
+    perspective: 1000px;
+    margin: auto;
+}
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 30%;
+}
+.flip-card-front {
+    background: #fff;
+    border: 3px solid #ffe4e1;
+}
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30%;
+}
+.flip-card-back {
+    background: #c08081;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.flip-card-back p {
+    font-size: 14px;
+}
+
+/* CONTACT */
+.contact p, .contact a {
+    padding: 5px 0;
+    font-size: 20px;
+}
+
+/* SKILLS */
+.skills {
+    background: #ffe4e9;
+    padding: 15px;
+    border-radius: 8px;
+}
+.skills dd, .skills dt {
+    margin-left: 10px;
+}
+
+/* ABOUT ME */
+.about p {
+    line-height: 1.5;
+    text-align: justify;
+    margin: 10px;
+}
+
+/* MESSAGE FORM */
+.message-form input[type="text"],
+.message-form input[type="email"],
+.message-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+.message-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.button {
+    padding: 10px 15px;
+    background: #ff6fa8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.button:hover {
+    background: #ff4f80;
+}
+
+/* FOOTER */
+.footer {
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 900px;
+    background: #ffc0cb;
+    font-size: 30px;
+    color: gray;
+    text-align: center;
+}
